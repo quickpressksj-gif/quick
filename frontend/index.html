@@ -12,43 +12,23 @@
   <div class="logo">quick<span>press</span></div>
 
   <div class="location">
-    Delivery in <b>20 minutes</b><br />
+    Delivery in <b>20 minutes</b><br>
     <small>New Delhi, India</small>
   </div>
 
-  <input class="search" placeholder="Search items" />
+  <input class="search" placeholder="Search items">
 
   <div class="actions">
     <button class="login">Login</button>
-    <button class="cart">My Cart</button>
+    <button class="cart-btn" onclick="toggleCart()">My Cart</button>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <h1>Express Ironing in Minutes</h1>
-    <p>Your favourite ironing service is now online</p>
-    <button>Order Now</button>
-  </div>
-</section>
-
-<!-- PROMO CARDS -->
-<section class="promo">
-  <div class="promo-card green">
-    <h3>Pharmacy at your doorstep</h3>
-    <button>Order Now</button>
-  </div>
-
-  <div class="promo-card yellow">
-    <h3>Pet Care supplies in minutes</h3>
-    <button>Order Now</button>
-  </div>
-
-  <div class="promo-card blue">
-    <h3>Baby Care essentials</h3>
-    <button>Order Now</button>
-  </div>
+  <h1>Express Ironing in Minutes</h1>
+  <p>Your favourite ironing service is now online</p>
+  <button>Order Now</button>
 </section>
 
 <!-- CATEGORIES -->
@@ -60,29 +40,49 @@
   <div class="cat">Dry Clean</div>
 </section>
 
-<!-- PRODUCT GRID -->
+<!-- PRODUCTS -->
 <section class="products">
   <div class="product">
     <div class="img"></div>
     <h4>Shirt Ironing</h4>
     <p>₹10</p>
-    <button class="add">ADD</button>
+    <button onclick="addToCart('Shirt Ironing',10)">ADD</button>
   </div>
 
   <div class="product">
     <div class="img"></div>
     <h4>Pant Ironing</h4>
     <p>₹12</p>
-    <button class="add">ADD</button>
+    <button onclick="addToCart('Pant Ironing',12)">ADD</button>
   </div>
 
   <div class="product">
     <div class="img"></div>
     <h4>Saree Ironing</h4>
     <p>₹25</p>
-    <button class="add">ADD</button>
+    <button onclick="addToCart('Saree Ironing',25)">ADD</button>
+  </div>
+
+  <div class="product">
+    <div class="img"></div>
+    <h4>Woolen Ironing</h4>
+    <p>₹30</p>
+    <button onclick="addToCart('Woolen Ironing',30)">ADD</button>
   </div>
 </section>
 
+<!-- CART DRAWER -->
+<div id="cartDrawer" class="cart-drawer">
+  <h3>My Cart</h3>
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    Total: ₹<span id="total">0</span>
+  </div>
+
+  <button class="checkout">Login to Proceed</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
